@@ -23,10 +23,11 @@
 
 body {
     font-family: Roboto, sans-serif;
-    font-size: 12px;
+    font-size: 13px;
     color: #262626;
     overflow-x: hidden;
-    background: url("../img/motif.png") repeat fixed;
+    /*background: url("../img/motif.png") repeat fixed;*/
+    background: #a3a3a3;
 }
 /*
     Definition classes
@@ -312,11 +313,11 @@ td {
     padding: 0;
     text-align: center;
     line-height: 0em;
-    border-bottom: 4px solid #ff9540;
+    border-bottom: 1px solid #ff9540;
 }
 .page-2 h1 span {
     padding: 4px 38px;
-    background-color: #ff9540;
+    background-color: #a3a3a3;
     /*background: url("../img/postit.png") no-repeat;*/
 
 }
@@ -378,23 +379,24 @@ td {
 
 .page-2 p {
 	color: #000000;
-    font-size: 2em;
+    font-size: 1.6em;
     font-weight: 300;
 	text-align: justify;
 	/*transform: translate(0%, 2%);*/
 }
 .center-it-vertical {
     position: relative;
+    bottom: 10px;
 }
 
 .page-2-ul {
     /*color: #fba858;*/
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.43);
-    font-size: 2em;
+    font-size: 1.6em;
     font-weight: 300;
     line-height: 1.7em;
     list-style: square;
-    margin: 24px 30px;
+    margin: 0px 30px 24px;
 }
 
 /* FIN PAGE OPEN DATA */
@@ -405,7 +407,7 @@ td {
     background-image: url("../img/bg_pages_2.png");
     height: 100vh;
     background-attachment: fixed;
-    background-position: 0% -110%;
+    background-position: 0% -80%;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -416,7 +418,7 @@ td {
 
 .page-3 h1 {
     display: block;
-    margin: 76vh auto 1em;
+    margin: 33vh auto 1em;
     font-weight: 400;
     font-size: 3.4em;
     padding: 0;
@@ -435,47 +437,33 @@ td {
     color: #EED5A2;
 }
 #wrapTitleJeudi{
-
-    height: 50vh;
     margin-top: 10vh;
-    padding-right: 7.5vw;
-    position: static;
+    padding: 15px 10%;
     -webkit-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
     box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
 }
-#wrapTitleJeudi{
+#wrapTitleJeudi, #wrapTitleVendredi {
     cursor: pointer;
 }
 
 #wrapTitleVendredi{
-    color: #EED5A2;
-    height: 70vh;
     margin-top: 10vh;
-    padding-right: 7.5vw;
-    position: static;
+    padding: 15px 10%;
     -webkit-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
     box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
-}
-#wrapTitleVendredi{
-    cursor: pointer;
 }
 #wrapProgJeudi{
     background-color: #FFF;
     font-size: 1.5em;
-    height: 50vh;
-    padding-top: 1em;
     margin-top: 10vh;
-    position: relative;
     -webkit-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
     box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
-    cursor: pointer;
 }
 #wrapProgJeudi *{
-    padding: 0 5%;
-    margin: 0.5em 5% 0 0;
+    margin: 0.5em 7.5% 0 7.5%;
 }
 #wrapProgJeudi p:last-of-type{
     margin-top: 2em !important;
@@ -483,7 +471,6 @@ td {
 #wrapProgVendredi{
     background-color: #FFF;
     font-size: 1.5em;    
-    height: 70vh;
     top: 10vh;
     position: relative;
     -webkit-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
@@ -501,7 +488,7 @@ td {
     display: none;
 }
 .progTime{
-    color: #EED5A2;
+    color: #FBA858;
     margin-top: 1em;
 }
 .dayInWrapProg{
