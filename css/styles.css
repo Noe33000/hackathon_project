@@ -434,11 +434,11 @@ td {
     padding: 0 1%;
 }
 #titleProgramme{
-    color: #EED5A2;
+    color: #FBA858;
     font-size: 3em;
     position: absolute;
     left: 10%;
-    margin-top: 5em;
+    margin-top: 6em;
     text-transform: uppercase;
 }
 
@@ -448,7 +448,7 @@ td {
     text-align: center;
     background-color: #FFF;
     font-size: 7em;
-    color: #EED5A2;
+    color: #FBA858;
     height: 50vh;
     margin-top: 10vh;
     padding-right: 7.5vw;
@@ -467,7 +467,7 @@ td {
     text-align: center;
     background-color: #FFF;
     font-size: 7em;
-    color: #EED5A2;
+    color: #FBA858;
     height: 70vh;
     margin-top: 10vh;
     padding-right: 7.5vw;
@@ -519,7 +519,7 @@ td {
     display: none;
 }
 .progTime{
-    color: #EED5A2;
+    color: #FBA858;
     margin-top: 1em;
 }
 .dayInWrapProg{
@@ -604,7 +604,47 @@ td {
 
 
 /* PAGE PARTENAIRES */
+#titlePratenaires{
+    color: #FBA858;
+    font-size: 3em;
+    left: 10%;
+    margin-top: 6em;
+    text-transform: uppercase;
+}
 
+#wrapPart1{
+    background-color: #FFF;
+    font-size: 2em;
+    height: 50vh;
+    margin-top: 10vh;
+    position: relative;
+    color: #FBA858;
+    -webkit-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
+}
+
+#wrapPart2{
+    background-color: #FFF;
+    font-size: 2em;    
+    height: 70vh;
+    top: 10vh;    
+    color: #FBA858;    
+    position: relative;
+    -webkit-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
+}
+.textPartenaires{
+    text-align: center;
+    padding-top: 2em;
+}
+#imgFt{
+    margin-top: 5em;
+}
+#imgCantine{
+    margin-top: 2em;
+}
 /* FIN PAGE PARTENAIRES */
 
 
