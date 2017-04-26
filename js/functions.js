@@ -1,12 +1,12 @@
 /* Florian */
-
+"use strict";
 $(document).ready(function () {
 
     let viewportH = $(window).height();
     let viewportW = $(window).width();
     let roundTitle = $('.title-wrapper');
-    let homeTitle = $('.home-title');
-    let counterNumber = $('#countdown');
+    let menuW = $('.menu-ul').width();
+    let closeIcon = $('.close-menu');
 
 
     // start counter
@@ -14,12 +14,6 @@ $(document).ready(function () {
 
 
     roundTitle.height(roundTitle.width() + "px");
-
-
-
-
-
-
 
     if ( viewportW > 1199 ) {
         roundTitle.animate(
@@ -38,12 +32,22 @@ $(document).ready(function () {
 
     }
     else if ( viewportW > 991 ) {
-        roundTitle.animate(
-            {
-                opacity: '1',
-                top: (viewportH / 2) - ( roundTitle.height() / 2 ) + "px",
-                left: ((viewportH / 100) * 5) + "px",
-            }, 800);
+        if (window.matchMedia("(orientation: landscape)").matches) {
+            roundTitle.animate(
+                {
+                    opacity: '1',
+                    top: (viewportH / 2) - ( roundTitle.height() / 2 ) + "px",
+                    left: ((viewportH / 100) * 5) + "px",
+                }, 800);
+        }
+        else {
+            roundTitle.animate(
+                {
+                    opacity: '1',
+                    top: 80
+                }, 800);
+        }
+        closeIcon.css('left', (menuW / 2) - (closeIcon.width() / 2) + "px");
 
         // adjust height of text blocks in page 2 (open-Data)
         let divHeigths = $(".resize-it-vertical").map(function() {
@@ -59,18 +63,15 @@ $(document).ready(function () {
                 opacity: '1',
                 top: '25px',
             }, 800);
-        let menuW = $('.menu-ul').width();
-        let closeIcon = $('.close-menu');
+
         closeIcon.css('left', (menuW / 2) - (closeIcon.width() / 2) + "px");
     }
     else {
         roundTitle.animate(
             {
                 opacity: '1',
-                top: '90px',
+                top: '40px',
             }, 800);
-        let menuW = $('.menu-ul').width();
-        let closeIcon = $('.close-menu');
         closeIcon.css('left', (menuW / 2) - (closeIcon.width() / 2) + "px");
         $('.home-logo-toulouse').attr('src', 'img/log_toulouse_260.png');
 
