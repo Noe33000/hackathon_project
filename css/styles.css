@@ -581,7 +581,7 @@ td {
     color: #FBA858;
     font-size: 3em;
     left: 10%;
-    margin-top: 6em;
+    margin-top: 40vh;
     text-transform: uppercase;
 }
 
@@ -590,6 +590,7 @@ td {
     font-size: 2em;
     height: 50vh;
     margin-top: 10vh;
+    top: 10vh;
     position: relative;
     color: #FBA858;
     -webkit-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
@@ -601,7 +602,7 @@ td {
     background-color: #FFF;
     font-size: 2em;    
     height: 70vh;
-    top: 10vh;    
+    top: 20vh;    
     color: #FBA858;    
     position: relative;
     -webkit-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
@@ -613,10 +614,10 @@ td {
     padding-top: 2em;
 }
 #imgFt{
-    margin-top: 5em;
+    margin-top: 2em;
 }
 #imgCantine{
-    margin-top: 2em;
+    /*margin-top: 2em;*/
 }
 /* FIN PAGE PARTENAIRES */
 
