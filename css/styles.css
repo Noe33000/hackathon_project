@@ -51,9 +51,9 @@ h2 {
 }
 
 .shadow-it {
-    -webkit-box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.53);
-    -moz-box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.53);
-    box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.53);
+    -webkit-box-shadow: 2px 5px 3px 0 rgba(0,0,0,0.53);
+    -moz-box-shadow: 2px 5px 3px 0 rgba(0,0,0,0.53);
+    box-shadow: 2px 5px 3px 0 rgba(0,0,0,0.53);
     /*-webkit-box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.78);*/
     /*-moz-box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.78);*/
     /*box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.78);*/
@@ -291,7 +291,7 @@ td {
 */
 /* PAGE 2 - ENJEUX OPEN DATA */
 
-.page-2-content {
+.page-2-content, #page-4-content {
     background-image: url("../img/bg_pages_2.png");
     height: 100vh;
     background-attachment: fixed;
@@ -418,13 +418,32 @@ td {
 
 .page-3 h1 {
     display: block;
+    width: 80%;
     margin: 33vh auto 1em;
-    font-weight: 400;
-    font-size: 3.4em;
+    font-weight: 300;
+    font-size: 3.5em;
     padding: 0;
-    text-align: left;
-    color: #ff9540;
+    text-align: center;
+    line-height: 0em;
+    border-bottom: 1px solid #ff9540;
 }
+.page-3 h1 span {
+    padding: 4px 38px;
+    background-color: #a3a3a3;
+}
+
+.page-3 > h1 > i {
+    font-weight: bold;
+}
+/*.page-3 h1 {*/
+    /*display: block;*/
+    /*margin: 33vh auto 1em;*/
+    /*font-weight: 400;*/
+    /*font-size: 3.4em;*/
+    /*padding: 0;*/
+    /*text-align: left;*/
+    /*color: #ff9540;*/
+/*}*/
 
 .programme-hidden {
     writing-mode: vertical-rl;
@@ -439,9 +458,9 @@ td {
 #wrapTitleJeudi{
     margin-top: 10vh;
     padding: 15px 10%;
-    -webkit-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
+    /*-webkit-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);*/
+    /*-moz-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);*/
+    /*box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);*/
 }
 #wrapTitleJeudi, #wrapTitleVendredi {
     cursor: pointer;
@@ -450,17 +469,17 @@ td {
 #wrapTitleVendredi{
     margin-top: 10vh;
     padding: 15px 10%;
-    -webkit-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
+    /*-webkit-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);*/
+    /*-moz-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);*/
+    /*box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);*/
 }
 #wrapProgJeudi{
     background-color: #FFF;
     font-size: 1.5em;
     margin-top: 10vh;
-    -webkit-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
+    /*-webkit-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);*/
+    /*-moz-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);*/
+    /*box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);*/
 }
 #wrapProgJeudi *{
     margin: 0.5em 7.5% 0 7.5%;
@@ -473,9 +492,9 @@ td {
     font-size: 1.5em;    
     top: 10vh;
     position: relative;
-    -webkit-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
+    /*-webkit-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);*/
+    /*-moz-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);*/
+    /*box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);*/
     cursor: pointer;
 }
 #wrapProgVendredi *{
@@ -558,7 +577,10 @@ td {
     /*border-radius: 15px;*/
     /*border: 1px solid #E91E63;*/
 }
-
+.org-logos {
+    width: 55%;
+    margin: 16px auto;
+}
 
 /* FIN PAGE ORGANISATEURS */
 

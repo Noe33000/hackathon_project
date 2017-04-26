@@ -164,7 +164,29 @@
         /*font-weight: 200;*/
         text-align: justify;
     }
-
+    h1 {
+        margin: 50px auto 1em!important;
+        font-size: 3em!important;
+        border: none!important;
+    }
+    h1 span {
+        background: none!important;
+        padding: 0!important;
+    }
+    #wrapTitleJeudi, #wrapProgJeudi, #wrapTitleVendredi, #wrapProgVendredi {
+        top: 0;
+        margin-top: 28px;
+        padding: 20px 0;
+    }
+    #wrapProgJeudi p:last-of-type {
+        margin-top: 22px !important;
+    }
+    #wrapProgVendredi p:last-of-type {
+        margin-top: 22px !important;
+    }
+    #wrapProgJeudi, #wrapProgVendredi * {
+        text-align: center;
+    }
     .countdown-letter td {
         font-size: 1.8em;
         text-align: center;
