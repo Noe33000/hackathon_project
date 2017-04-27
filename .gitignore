@@ -3,3 +3,5 @@
 img/.DS_Store
 css/.DS_Store
 js/.DS_Store
+node_modules/
+config.json

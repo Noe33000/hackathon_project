@@ -1,0 +1,11 @@
+{
+    "build_dir": "build",
+    "vendor_files": {
+        "css": [
+            "css/*.css"
+        ],
+        "js": [
+            "js/*.js"
+        ]
+    }
+}
