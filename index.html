@@ -24,11 +24,12 @@
         <nav class="navbar navbar-default">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Menu</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+            <span class="icon-bar" data-page="1"></span>
+            <span class="icon-bar" data-page="2"></span>
+            <span class="icon-bar" data-page="3"></span>
+            <span class="icon-bar" data-page="4"></span>
+            <span class="icon-bar" data-page="5"></span>
+            <span class="icon-bar" data-page="6"></span>
         </button>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -46,7 +47,7 @@
         </nav>
 
 
-        <div class="row home-viewport shadow-it">
+        <div class="row home-viewport shadow-it" data-page="1">
             <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-0 col-md-5 title-wrapper">
             </div>
             <div class="col-sm-12 col-md-7 countdown-wrapper">
@@ -73,7 +74,7 @@
         <!-- début -->
 
 
-        <div id="open-data" class="row page-2 shadow-it">
+        <div id="open-data" class="row page page-2 shadow-it" data-page="2">
             <div class="col-xs-12">
                 <h1><span>Open Data</span></h1>
             </div>
@@ -121,7 +122,7 @@
 
         <!-- page 3 début PROGRAMME-->
 
-        <div id="programme" class="row page-3 page-3-content shadow-it">
+        <div id="programme" class="row page page-3 page-3-content shadow-it" data-page="3">
             <div class="col-xs-12 col-md-3">
                 <h1><span>Programme</span></h1>
             </div>
@@ -170,8 +171,8 @@
                         </p>
                         <p class="dayInWrapProg">Vendredi</p>
                     </div>
-                    <div id="wrapTitleJeudi" class="col-xs-12 col-md-offset-1 col-md-5 programme-hidden transitionProg shadow-it">JEUDI</div>
-                    <div id="wrapTitleVendredi" class="col-xs-12 col-md-offset-1 col-md-5 programme-hidden transitionProg shadow-it">VENDREDI</div>
+                    <div id="wrapTitleJeudi" class="col-xs-12 col-md-offset-1 col-md-5 programme-hidden transitionProg shadow-it"><span class="flexit">JEUDI</span></div>
+                    <div id="wrapTitleVendredi" class="col-xs-12 col-md-offset-1 col-md-5 programme-hidden transitionProg shadow-it"><span class="flexit">VENDREDI</span></div>
                 </div>
             </div>
         </div>
@@ -180,10 +181,10 @@
         <!-- page 4 début ORGANISATEURS-->
 
 
-        <div id="organisateur" class="row page-2">
+        <div id="organisateur" class="row page page-4" data-page="4">
             <div class="col-xs-12">
                 <h1><span>Organisateurs</span></h1>
-            </div>
+            </div>1
 
             <div class="col-xs-12 page-4-content">
                 <h2>
@@ -224,7 +225,7 @@
 
         <!-- page 5 début PARTENAIRES-->
 
-        <div id="partenaires" class="row page-2">
+        <div id="partenaires" class="row page page-5" data-page="5">
             <div class="col-md-offset-1 col-md-2 col-xs-12">
                 <h3 id="titlePratenaires">Partenaires</h3>
             </div>
@@ -253,7 +254,7 @@
         <!-- page 5 fin -->
 
         <!-- page 6 début ESPACE PRESSE-->
-        <div id="espace-press" class="row page-2">
+        <div id="espace-press" class="row page page-6" data-page="6">
             <div class="content-page-6">
                 <div class="col-xs-12">
                     <h1 id="title-Press"><span>Espace Press</span></h1>
