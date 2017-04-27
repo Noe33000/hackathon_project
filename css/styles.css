@@ -607,6 +607,7 @@ td {
     text-transform: uppercase;
 }
 
+
 #wrapPart1{
     background-color: #FFF;
     font-size: 2em;
@@ -646,7 +647,46 @@ td {
 
 
 /* PAGE ESPACE PRESSE */
+.content-page-6{
+    background-image: url("../img/bg_pages.png");
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: 0% -110%;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 0 1%;
+    text-align: center;
+}
+#title-Press{
+    margin-bottom: 2em;
+}
+.title-partenariat{
+    font-size: 2em;
+}
+.title-acreditation{
+    font-size: 2em;
+}
+#text-partenariat{
+    padding: 1em 5%;
+}
 
+.contact-acrediation{
+    font-size: 2em;
+}
+
+span.glyphicon{
+    font-size: 3em;
+    color: #E91E63;
+    margin-top: 0.5em;
+}
+.wrap-Press{
+    background-color: white;
+    border-radius: 5px;
+    height: 75vh;
+}
 /* FIN PAGE ESPACE PRESSE */
 
 @media all and (max-width: 991px) {
