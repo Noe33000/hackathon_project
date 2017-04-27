@@ -489,22 +489,39 @@ td {
 }
 
 .programme-hidden {
+    height: 100%;
     writing-mode: vertical-rl;
     text-orientation: sideways;
     text-align: center;
     background-color: #FFF;
-    font-size: 7em;
+    font-size: 6em;
     font-weight: 700;
     letter-spacing: 0.1em;
     color: #E91E63;
 }
 
 #wrapTitleJeudi {
-    /*height: 50vh;*/
+    height: 50vh;
 }
 
 #wrapTitleVendredi {
-    /*height: 70vh;*/
+    height: 70vh;
+}
+
+#wrapProgJeudi {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#wrapProgVendredi {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.flexit-2 {
+    flex: 1 1 auto;
 }
 
 #wrapTitleJeudi,
@@ -523,11 +540,18 @@ td {
     font-size: 1.5em;
     margin: 10vh 3vw;
     padding: 3vh 1vw;
+    text-align: justify;
     cursor: pointer;
 }
 
+#wrapProgJeudi:after,
+#wrapProgVendredi:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+
 #wrapProgJeudi * {
-    /*height: 50vh;*/
     margin: 0.5em 7.5% 0 7.5%;
 }
 
@@ -536,7 +560,6 @@ td {
 }
 
 #wrapProgVendredi * {
-    /*height: 70vh;*/
     margin: 0.5em 7.5% 0 7.5%;
 }
 
@@ -548,6 +571,12 @@ td {
     display: none !important;
 }
 
+.contentDayProg,
+.progtime,
+.dayInWrapProg {
+    flex: 1 1 auto;
+}
+
 .progTime {
     color: #FBA858;
     margin-top: 1em;
@@ -556,7 +585,7 @@ td {
 .dayInWrapProg {
     text-align: center;
     font-size: 2em;
-    margin-top: 0.5em !important;
+    /*margin-top: 0.5em !important;*/
 }
 
 

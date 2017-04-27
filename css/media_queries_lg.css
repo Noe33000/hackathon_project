@@ -35,8 +35,29 @@
     }
     
     @media all and (min-width: 1200px) and (max-width: 1400px) {
-        .programme-hidden {
-            /*font-size: 10vh;*/
+        #wrapTitleJeudi,
+        #wrapTitleVendredi {
+            padding: 6vh 0;
+        }
+        #wrapProgVendredi p:last-of-type {
+            margin-top: 0.4em !important;
+        }
+        #wrapProgJeudi p:last-of-type {
+            margin-top: 0.4em !important;
+        }
+        .page-3 h1,
+        .page-5 h1 {
+            margin-top: 69vh;
+        }
+        .text-partenariat {
+            font-size: 2em;
+        }
+        .glyphicon-envelope,
+        .glyphicon-phone {
+            margin-bottom: -0.5em;
+            font-size: 3em;
+            color: #E91E63;
+            margin-top: 0.5em;
         }
     }
     

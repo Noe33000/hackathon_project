@@ -153,11 +153,9 @@ $(document).ready(function() {
 
 
 /* Noé */
-
 let wrapJeudi = document.getElementById("wrapTitleJeudi");
 let wrapVendredi = document.getElementById("wrapTitleVendredi");
-let vendrediH = window.getComputedStyle(wrapVendredi).getPropertyValue('height');
-let jeudiH = window.getComputedStyle(wrapJeudi).getPropertyValue('height');
+
 
 let wrapProgJeudi = document.getElementById("wrapProgJeudi");
 let wrapProgVendredi = document.getElementById("wrapProgVendredi");
@@ -167,9 +165,7 @@ function showProg(event) {
     wrapJeudi.classList.add("noDispl");
     wrapVendredi.classList.add("noDispl");
 
-    wrapProgJeudi.style.height = jeudiH;
     wrapProgJeudi.classList.remove("noDispl");
-    wrapProgVendredi.style.height = vendrediH;
     wrapProgVendredi.classList.remove("noDispl");
 
     // wrapJeudi.classList.add("noDispl");
