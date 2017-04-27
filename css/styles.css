@@ -559,7 +559,7 @@ d#wrapProgJeudi {
 
 .page-4-content {
     background-image: url("../img/bg_pages.png");
-    height: 100vh;
+    height: 80vh;
     background-attachment: fixed;
     background-position: 0% -110%;
     background-repeat: no-repeat;
@@ -613,11 +613,12 @@ d#wrapProgJeudi {
 
 /* PAGE PARTENAIRES */
 
+
 #programme {
     background-image: url("../img/bg_pages_2.png");
     height: 100vh;
     background-attachment: fixed;
-    background-position: 0% -80%;
+    background-position: 0% -110%;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -633,6 +634,7 @@ d#wrapProgJeudi {
     margin-top: 40vh;
     text-transform: uppercase;
 }
+
 
 #wrapPart1 {
     background-color: #FFF;
@@ -661,7 +663,7 @@ d#wrapProgJeudi {
 
 .textPartenaires {
     text-align: center;
-    padding-top: 2em;
+    /*padding-top: 2em;*/
 }
 
 #imgFt {
