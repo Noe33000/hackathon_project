@@ -72,10 +72,6 @@ h2 {
     background-color: #E91E63 !important;
 }
 
-.hamburger-scrollspy-side {
-    background-color: #e89eb7 !important;
-}
-
 .home-viewport {
     background-image: url("../img/bg_home.jpg");
     -webkit-background-size: cover;
