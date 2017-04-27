@@ -102,25 +102,29 @@ $(document).ready(function() {
     let pages = document.getElementsByClassName('page');
     console.log(pages[0]);
     $(window).on('scroll', function() {
-        $.each(pages, function() {
-            let pageOffsetTop = $(this).offset().top;
-            if ($(window).scrollTop() > pageOffsetTop) {
-                let pageNum = $(this).data('page');
-                let currentBar = $('.icon-bar').filter(function() {
-                    return $(this).data("page") == pageNum;
-                });
-                let previousBar = $('.icon-bar').filter(function() {
-                    return $(this).data("page") == (parseInt(pageNum, 10) - 1).toString();
-                });
-                let nextBar = $('.icon-bar').filter(function() {
-                    return $(this).data("page") == (parseInt(pageNum, 10) + 1).toString();
-                });
-                currentBar.addClass('hamburger-scrollspy');
-                currentBar.addClass('hamburger-scrollspy');
-                currentBar.addClass('hamburger-scrollspy');
-
-            }
+        let scrollPos = $(window).scrollTop();
+        let pageTwo = $('.page').filter(function() {
+            return $(this).data("page") == '2';
         });
+        if (scrollPos < pageTwo.offset().top) {
+            $('.icon-bar').removeClass('hamburger-scrollspy');
+        } else {
+            $.each(pages, function() {
+                let pageOffsetTop = $(this).offset().top;
+                if ($(window).scrollTop() > pageOffsetTop) {
+                    let pageNum = $(this).data('page');
+                    let currentBar = $('.icon-bar').filter(function() {
+                        return $(this).data("page") == pageNum;
+                    });
+                    let otherBar = $('.icon-bar').filter(function() {
+                        return $(this).data("page") != pageNum;
+                    });
+                    currentBar.addClass('hamburger-scrollspy');
+                    otherBar.removeClass('hamburger-scrollspy');
+                    // return false;
+                }
+            });
+        }
     });
 });
 
