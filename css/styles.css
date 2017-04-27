@@ -55,6 +55,10 @@ h2 {
     font-weight: 100;
 }
 
+.text-pink {
+    color: #E91E63;
+}
+
 .no-padding {
     padding: 0!important;
 }
@@ -66,6 +70,12 @@ h2 {
     /*-webkit-box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.78);*/
     /*-moz-box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.78);*/
     /*box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.78);*/
+}
+
+.shadow-it-box {
+    -webkit-box-shadow: 10px 10px 53px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 53px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 53px 0px rgba(0, 0, 0, 0.75);
 }
 
 .hamburger-scrollspy {
@@ -319,8 +329,8 @@ td {
 /* PAGE 2 - ENJEUX OPEN DATA */
 
 .page {
-    background-image: url("../img/bg_pages_2.png");
     height: 100vh;
+    background-image: url("../img/bg_pages_2.png");
     background-attachment: fixed;
     background-position: 0% -110%;
     background-repeat: no-repeat;
@@ -328,17 +338,32 @@ td {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    padding: 0 1%;
 }
 
-.page p {
+.page-header {
+    height: 20vh;
+}
+
+.page-content {
+    height: 80vh;
+    padding: 10vh 1%;
+}
+
+.page-content-alt {
+    height: 100vh;
+    padding: 10vh 1%;
+}
+
+.page-2 p,
+.page-4 p {
     color: #000000;
     font-size: 1.6em;
     font-weight: 300;
     text-align: justify;
 }
 
-.page-2 h1 {
+.page-2 h1,
+.page-6 h1 {
     display: block;
     width: 80%;
     margin: 56px auto 1em;
@@ -350,7 +375,8 @@ td {
     border-bottom: 1px solid #ff9540;
 }
 
-.page-2 h1 span {
+.page-2 h1 span,
+.page-6 h1 span {
     padding: 4px 38px;
     background-color: #a3a3a3;
     /*background: url("../img/postit.png") no-repeat;*/
@@ -475,22 +501,21 @@ td {
 
 #wrapTitleJeudi,
 #wrapTitleVendredi {
-    margin-top: 10vh;
-    padding: 15px 10%;
+    margin: 10vh 3vw;
+    padding: 8vh 0;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
     cursor: pointer;
 }
 
-d#wrapProgJeudi {
+#wrapProgJeudi,
+#wrapProgVendredi {
     background-color: #FFF;
     font-size: 1.5em;
-    margin-top: 10vh;
-    /*-webkit-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);*/
-    /*-moz-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);*/
-    /*box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);*/
+    margin: 10vh 3vw;
+    padding: 3vh 1vw;
+    cursor: pointer;
 }
 
 #wrapProgJeudi * {
@@ -499,17 +524,6 @@ d#wrapProgJeudi {
 
 #wrapProgJeudi p:last-of-type {
     margin-top: 2em !important;
-}
-
-#wrapProgVendredi {
-    background-color: #FFF;
-    font-size: 1.5em;
-    top: 10vh;
-    position: relative;
-    /*-webkit-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);*/
-    /*-moz-box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);*/
-    /*box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);*/
-    cursor: pointer;
 }
 
 #wrapProgVendredi * {
@@ -521,7 +535,7 @@ d#wrapProgJeudi {
 }
 
 .noDispl {
-    display: none;
+    display: none !important;
 }
 
 .progTime {
@@ -557,7 +571,8 @@ d#wrapProgJeudi {
 
 /* PAGE ORGANISATEURS */
 
-.page-4-content {
+
+/*.page-4-content {
     background-image: url("../img/bg_pages.png");
     height: 80vh;
     background-attachment: fixed;
@@ -568,7 +583,7 @@ d#wrapProgJeudi {
     -o-background-size: cover;
     background-size: cover;
     padding: 0 1%;
-}
+}*/
 
 .page-4 h1 {
     display: block;
@@ -614,6 +629,7 @@ d#wrapProgJeudi {
 /* PAGE PARTENAIRES */
 
 
+/*
 #programme {
     background-image: url("../img/bg_pages_2.png");
     height: 100vh;
@@ -625,7 +641,7 @@ d#wrapProgJeudi {
     -o-background-size: cover;
     background-size: cover;
     padding: 0 1%;
-}
+}*/
 
 #titlePratenaires {
     color: #FBA858;
@@ -635,43 +651,37 @@ d#wrapProgJeudi {
     text-transform: uppercase;
 }
 
-
 #wrapPart1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     background-color: #FFF;
-    font-size: 2em;
     height: 50vh;
-    margin-top: 10vh;
-    top: 10vh;
-    position: relative;
-    color: #FBA858;
-    -webkit-box-shadow: 10px 10px 53px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 10px 10px 53px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 10px 10px 53px 0px rgba(0, 0, 0, 0.75);
 }
 
 #wrapPart2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     background-color: #FFF;
-    font-size: 2em;
     height: 70vh;
-    top: 20vh;
-    color: #FBA858;
-    position: relative;
-    -webkit-box-shadow: 10px 10px 53px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 10px 10px 53px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 10px 10px 53px 0px rgba(0, 0, 0, 0.75);
 }
 
 .textPartenaires {
+    color: #FBA858!important;
+    font-size: 2em!important;
     text-align: center;
     /*padding-top: 2em;*/
 }
 
 #imgFt {
-    margin-top: 2em;
+    width: 80%;
+    margin: 0 auto;
 }
 
 #imgCantine {
-    /*margin-top: 2em;*/
+    width: 80%;
+    margin: 0 auto;
 }
 
 
@@ -680,6 +690,8 @@ d#wrapProgJeudi {
 
 /* PAGE ESPACE PRESSE */
 
+
+/*
 .content-page-6 {
     background-image: url("../img/bg_pages.png");
     height: 100vh;
@@ -692,10 +704,19 @@ d#wrapProgJeudi {
     background-size: cover;
     padding: 0 1%;
     text-align: center;
+}*/
+
+.page-content-6 {
+    padding: 0vh 2%;
 }
 
 #title-Press {
     margin-bottom: 2em;
+}
+
+.title-presse {
+    text-align: center;
+    font-size: 2em;
 }
 
 .title-partenariat {
@@ -706,15 +727,15 @@ d#wrapProgJeudi {
     font-size: 2em;
 }
 
-#text-partenariat {
-    padding: 1em 5%;
+.text-partenariat {
+    padding: 1em 8%;
+    font-size: 2.6em;
+    text-align: center;
 }
 
-.contact-acrediation {
-    font-size: 2em;
-}
-
-span.glyphicon {
+.glyphicon-envelope,
+.glyphicon-phone {
+    margin-bottom: 0.5em;
     font-size: 3em;
     color: #E91E63;
     margin-top: 0.5em;

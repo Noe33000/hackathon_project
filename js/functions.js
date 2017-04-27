@@ -25,8 +25,14 @@ $(document).ready(function() {
                 return $(this).height();
             }).get(),
             maxHeight = Math.max.apply(null, divHeigths);
+        $(".resize-it-vertical").height(maxHeight + (maxHeight / 100) * 20);
 
-        $(".resize-it-vertical").height(maxHeight);
+        let divHeigthsO = $(".resize-it-vertical-organisateur").map(function() {
+                return $(this).height();
+            }).get(),
+            maxHeightO = Math.max.apply(null, divHeigthsO);
+
+        $(".resize-it-vertical-organisateur").height(maxHeightO + (maxHeightO / 100) * 20);
 
     } else if (viewportW > 991) {
         if (window.matchMedia("(orientation: landscape)").matches) {
@@ -147,6 +153,10 @@ function showProg(event) {
     wrapProgJeudi.classList.remove("noDispl");
     wrapProgVendredi.classList.remove("noDispl");
 
+    wrapJeudi.classList.add("noDispl");
+    wrapVendredi.classList.add("noDispl");
+    wrapProgJeudi.classList.remove("noDispl");
+    wrapProgVendredi.classList.remove("noDispl");
 
     // wrapJeudi.classList.remove("transitionIn");
     // wrapVendredi.classList.remove("transitionIn");
