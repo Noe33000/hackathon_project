@@ -239,8 +239,10 @@
     .center-it-vertical {
         margin: 12px 0;
     }
-
-}
+    .page-3 h1 {
+        margin: 78vh auto 1em;
+        font-size: 3.3em;
+    }
 
 /*--- xs, sm and md only --- */
 @media  all and  (max-width: 1199px) {
