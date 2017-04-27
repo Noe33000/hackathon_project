@@ -1,0 +1,25 @@
+{
+  "name": "hackathon_project",
+  "version": "1.0.0",
+  "description": "website for an Hackaython event",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Graphmatic/hackathon_project.git"
+  },
+  "keywords": [
+    "hackathon"
+  ],
+  "author": "Wild Code School",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Graphmatic/hackathon_project/issues"
+  },
+  "homepage": "https://github.com/Graphmatic/hackathon_project#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
