@@ -1,7 +1,6 @@
 /* Florian */
 "use strict";
-$(document).ready(function () {
-
+$(document).ready(function() {
     let viewportH = $(window).height();
     let viewportW = $(window).width();
     let roundTitle = $('.title-wrapper');
@@ -15,13 +14,12 @@ $(document).ready(function () {
 
     roundTitle.height(roundTitle.width() + "px");
 
-    if ( viewportW > 1199 ) {
-        roundTitle.animate(
-            {
-                opacity: '1',
-                top: ((viewportH / 100) * 2) + "px",
-                left: ((viewportH / 100) * 2) + "px",
-            }, 800);
+    if (viewportW > 1199) {
+        roundTitle.animate({
+            opacity: '1',
+            top: ((viewportH / 100) * 2) + "px",
+            left: ((viewportH / 100) * 2) + "px",
+        }, 800);
         // adjust height of text blocks in page 2 (open-Data)
         let divHeigths = $(".resize-it-vertical").map(function() {
                 return $(this).height();
@@ -30,22 +28,18 @@ $(document).ready(function () {
 
         $(".resize-it-vertical").height(maxHeight);
 
-    }
-    else if ( viewportW > 991 ) {
+    } else if (viewportW > 991) {
         if (window.matchMedia("(orientation: landscape)").matches) {
-            roundTitle.animate(
-                {
-                    opacity: '1',
-                    top: (viewportH / 2) - ( roundTitle.height() / 2 ) + "px",
-                    left: ((viewportH / 100) * 5) + "px",
-                }, 800);
-        }
-        else {
-            roundTitle.animate(
-                {
-                    opacity: '1',
-                    top: 80
-                }, 800);
+            roundTitle.animate({
+                opacity: '1',
+                top: (viewportH / 2) - (roundTitle.height() / 2) + "px",
+                left: ((viewportH / 100) * 5) + "px",
+            }, 800);
+        } else {
+            roundTitle.animate({
+                opacity: '1',
+                top: 80
+            }, 800);
         }
         closeIcon.css('left', (menuW / 2) - (closeIcon.width() / 2) + "px");
 
@@ -56,59 +50,80 @@ $(document).ready(function () {
             maxHeight = Math.max.apply(null, divHeigths);
 
         $(".resize-it-vertical").height(maxHeight);
-    }
-    else if ( viewportW > 768 ) {
-        roundTitle.animate(
-            {
-                opacity: '1',
-                top: '25px',
-            }, 800);
+    } else if (viewportW > 768) {
+        roundTitle.animate({
+            opacity: '1',
+            top: '25px',
+        }, 800);
 
         closeIcon.css('left', (menuW / 2) - (closeIcon.width() / 2) + "px");
-    }
-    else {
-        roundTitle.animate(
-            {
-                opacity: '1',
-                top: '40px',
-            }, 800);
+    } else {
+        roundTitle.animate({
+            opacity: '1',
+            top: '40px',
+        }, 800);
         closeIcon.css('left', (menuW / 2) - (closeIcon.width() / 2) + "px");
         $('.home-logo-toulouse').attr('src', 'img/log_toulouse_260.png');
 
     }
 
-    setTimeout(function () {
+    setTimeout(function() {
         $('.countdown-num').animate({
             opacity: 1
         });
     }, 300);
 
     $('.navbar-toggle').on('click', function(e) {
-             $('.navbar-collapse').show().addClass('rotate-y-anim');
-            $('.navbar-toggle').fadeOut(200);
+        $('.navbar-collapse').show().addClass('rotate-y-anim');
+        $('.navbar-toggle').fadeOut(200);
 
     });
-    $('.menu-li').on('click', function () {
+    $('.menu-li').on('click', function() {
         $('.navbar-collapse').removeClass('rotate-y-anim');
         $('.navbar-toggle').fadeIn(500);
     });
 
-    $('.close-menu').on('click', function () {
+    $('.close-menu').on('click', function() {
         $('.navbar-collapse').removeClass('rotate-y-anim');
         $('.navbar-toggle').fadeIn(500);
     });
 
 
     $('.arrow-down').on('click', function() {
-       window.scrollTo(0, $('#open-data').offset().top);
+        window.scrollTo(0, $('#open-data').offset().top);
     });
     $('.open-data-link').on('click', function(e) {
-       e.preventDefault();
+        e.preventDefault();
         window.open('https://data.toulouse-metropole.fr/page/home/', '_blank');
     });
 
+    /* scroll spy for hamburger menu */
+    let hamburgerBars = document.getElementsByClassName('icon-bar');
+    let pages = document.getElementsByClassName('page');
+    console.log(pages[0]);
+    $(window).on('scroll', function() {
+        $.each(pages, function() {
+            let pageOffsetTop = $(this).offset().top;
+            if ($(window).scrollTop() > pageOffsetTop) {
+                let pageNum = $(this).data('page');
+                let currentBar = $('.icon-bar').filter(function() {
+                    return $(this).data("page") == pageNum;
+                });
+                let previousBar = $('.icon-bar').filter(function() {
+                    return $(this).data("page") == (parseInt(pageNum, 10) - 1).toString();
+                });
+                let nextBar = $('.icon-bar').filter(function() {
+                    return $(this).data("page") == (parseInt(pageNum, 10) + 1).toString();
+                });
+                currentBar.addClass('hamburger-scrollspy');
+                currentBar.addClass('hamburger-scrollspy');
+                currentBar.addClass('hamburger-scrollspy');
 
+            }
+        });
+    });
 });
+
 
 
 /* FIN Florian */
@@ -140,7 +155,7 @@ function showProg(event) {
     //     wrapProgVendredi.classList.remove("noDispl");
     //     wrapJeudi.classList.add("noDispl");
     //     wrapVendredi.classList.add("noDispl");
-        
+
     //     wrapProgJeudi.classList.remove("transitionOut");
     //     wrapProgVendredi.classList.remove("transitionOut");
 
@@ -148,8 +163,9 @@ function showProg(event) {
     //     wrapProgVendredi.classList.add("transitionIn");
     // }, 000);
 }
+
 function hideProg(event) {
-    
+
     wrapJeudi.classList.remove("noDispl");
     wrapVendredi.classList.remove("noDispl");
     wrapProgJeudi.classList.add("noDispl");
@@ -169,7 +185,7 @@ function hideProg(event) {
 
     //     wrapJeudi.classList.remove("transitionOut");
     //     wrapVendredi.classList.remove("transitionOut");
-        
+
     //     wrapJeudi.classList.add("transitionIn");
     //     wrapVendredi.classList.add("transitionIn");
     // }, 2300);
