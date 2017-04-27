@@ -13,13 +13,7 @@ $(document).ready(function() {
 
 
     roundTitle.height(roundTitle.width() + "px");
-
-    if (viewportW > 1199) {
-        roundTitle.animate({
-            opacity: '1',
-            top: ((viewportH / 100) * 2) + "px",
-            left: ((viewportH / 100) * 2) + "px",
-        }, 800);
+    if (viewportW > 1366) {
         // adjust height of text blocks in page 2 (open-Data)
         let divHeigths = $(".resize-it-vertical").map(function() {
                 return $(this).height();
@@ -33,6 +27,25 @@ $(document).ready(function() {
             maxHeightO = Math.max.apply(null, divHeigthsO);
 
         $(".resize-it-vertical-organisateur").height(maxHeightO + (maxHeightO / 100) * 20);
+    } else if (viewportW > 1199) {
+        roundTitle.animate({
+            opacity: '1',
+            top: ((viewportH / 100) * 2) + "px",
+            left: ((viewportH / 100) * 2) + "px",
+        }, 800);
+        // adjust height of text blocks in page 2 (open-Data)
+        let divHeigths = $(".resize-it-vertical").map(function() {
+                return $(this).height();
+            }).get(),
+            maxHeight = Math.max.apply(null, divHeigths);
+        $(".resize-it-vertical").height(maxHeight + (maxHeight / 100));
+
+        let divHeigthsO = $(".resize-it-vertical-organisateur").map(function() {
+                return $(this).height();
+            }).get(),
+            maxHeightO = Math.max.apply(null, divHeigthsO);
+
+        $(".resize-it-vertical-organisateur").height(maxHeightO + (maxHeightO / 100));
 
     } else if (viewportW > 991) {
         if (window.matchMedia("(orientation: landscape)").matches) {
@@ -141,22 +154,28 @@ $(document).ready(function() {
 
 /* Noé */
 
-var wrapJeudi = document.getElementById("wrapTitleJeudi");
-var wrapVendredi = document.getElementById("wrapTitleVendredi");
-var wrapProgJeudi = document.getElementById("wrapProgJeudi");
-var wrapProgVendredi = document.getElementById("wrapProgVendredi");
+let wrapJeudi = document.getElementById("wrapTitleJeudi");
+let wrapVendredi = document.getElementById("wrapTitleVendredi");
+let vendrediH = window.getComputedStyle(wrapVendredi).getPropertyValue('height');
+let jeudiH = window.getComputedStyle(wrapJeudi).getPropertyValue('height');
+
+let wrapProgJeudi = document.getElementById("wrapProgJeudi");
+let wrapProgVendredi = document.getElementById("wrapProgVendredi");
 
 
 function showProg(event) {
     wrapJeudi.classList.add("noDispl");
     wrapVendredi.classList.add("noDispl");
+
+    wrapProgJeudi.style.height = jeudiH;
     wrapProgJeudi.classList.remove("noDispl");
+    wrapProgVendredi.style.height = vendrediH;
     wrapProgVendredi.classList.remove("noDispl");
 
-    wrapJeudi.classList.add("noDispl");
-    wrapVendredi.classList.add("noDispl");
-    wrapProgJeudi.classList.remove("noDispl");
-    wrapProgVendredi.classList.remove("noDispl");
+    // wrapJeudi.classList.add("noDispl");
+    // wrapVendredi.classList.add("noDispl");
+    // wrapProgJeudi.classList.remove("noDispl");
+    // wrapProgVendredi.classList.remove("noDispl");
 
     // wrapJeudi.classList.remove("transitionIn");
     // wrapVendredi.classList.remove("transitionIn");

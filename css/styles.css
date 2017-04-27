@@ -499,6 +499,14 @@ td {
     color: #E91E63;
 }
 
+#wrapTitleJeudi {
+    /*height: 50vh;*/
+}
+
+#wrapTitleVendredi {
+    /*height: 70vh;*/
+}
+
 #wrapTitleJeudi,
 #wrapTitleVendredi {
     margin: 10vh 3vw;
@@ -519,6 +527,7 @@ td {
 }
 
 #wrapProgJeudi * {
+    /*height: 50vh;*/
     margin: 0.5em 7.5% 0 7.5%;
 }
 
@@ -527,6 +536,7 @@ td {
 }
 
 #wrapProgVendredi * {
+    /*height: 70vh;*/
     margin: 0.5em 7.5% 0 7.5%;
 }
 
