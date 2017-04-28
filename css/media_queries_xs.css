@@ -1,4 +1,5 @@
 /*--- xs only ---*/
+
 @media all and (max-width: 767px) {
     .menu-li {
         font-size: 2em;
@@ -28,7 +29,6 @@
         font-size: 2em;
         text-align: center;
     }
-
     .countdown-wrapper {
         display: block;
         position: absolute;
@@ -36,14 +36,12 @@
         max-height: 36vh;
         padding: 0;
     }
-
     #countdown {
         margin: 0;
         font-size: 2.8em!important;
         font-weight: 100;
         text-align: center;
     }
-
     .counter-table {
         width: 100vw;
         float: none;
@@ -53,11 +51,12 @@
         font-weight: 100;
         text-align: center;
     }
-    .page-2-content, .page-3-content, .page-4-content {
+    .page-2-content,
+    .page-3-content,
+    .page-4-content {
         height: auto;
         background-attachment: initial;
     }
-
     .page-2 h1 {
         margin: 38px auto 1em;
         font-size: 3em;
@@ -67,7 +66,6 @@
         background: none!important;
         padding: 0!important;
     }
-
     .page-2 h2 {
         line-height: 1.5em;
         margin: -6px 0 20px;
@@ -77,18 +75,21 @@
         font-size: 3em;
         border: none;
     }
-
-    #wrapTitleJeudi, #wrapProgJeudi, #wrapTitleVendredi, #wrapProgVendredi {
+    #wrapTitleJeudi,
+    #wrapProgJeudi,
+    #wrapTitleVendredi,
+    #wrapProgVendredi {
         top: 0;
         margin-top: 28px;
     }
     #wrapProgJeudi p:last-of-type {
-         margin-top: 22px !important;
+        margin-top: 22px !important;
     }
     #wrapProgVendredi p:last-of-type {
         margin-top: 22px !important;
     }
-    #wrapProgJeudi, #wrapProgVendredi * {
+    #wrapProgJeudi,
+    #wrapProgVendredi * {
         text-align: center;
     }
     .navbar-toggle {
@@ -119,7 +120,6 @@
         width: 90%;
         margin: 5%;
     }
-
 }
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
