@@ -347,7 +347,7 @@ td {
     height: 100vh;
     background-image: url("../img/bg_pages_2.png");
     background-attachment: fixed;
-    background-position: 0% -110%;
+    background-position: 0% -50%;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -817,4 +817,26 @@ td {
     .bottom-right {
         border-radius: 8px;
     }
+}
+
+.footer {
+    margin-top: 0.8em;
+    height: 50px;
+    background-color: #000;
+    /*opacity: 0.9;*/
+    -webkit-box-shadow: 5px 7px 2px -1px rgba(0, 0, 0, 0.56);
+    -moz-box-shadow: 5px 7px 2px -1px rgba(0, 0, 0, 0.56);
+    box-shadow: 5px 7px 2px -1px rgba(0, 0, 0, 0.56);
+}
+
+.footer .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.footer .text-muted {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 100;
+    color: #F9A02E;
 }
