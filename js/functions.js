@@ -37,14 +37,14 @@ $(document).ready(function() {
                 return $(this).height();
             }).get(),
             maxHeight = Math.max.apply(null, divHeigths);
-        $('.resize-it-vertical').height(maxHeight + (maxHeight / 100));
+        $('.resize-it-vertical').height(maxHeight + ((maxHeight / 100) * 8));
 
         let divHeigthsO = $('.resize-it-vertical-organisateur').map(function() {
                 return $(this).height();
             }).get(),
             maxHeightO = Math.max.apply(null, divHeigthsO);
 
-        $('.resize-it-vertical-organisateur').height(maxHeightO + (maxHeightO / 100));
+        $('.resize-it-vertical-organisateur').height(maxHeightO + ((maxHeightO / 100) * 8));
     } else if (viewportW > 991) {
         if (window.matchMedia('(orientation: landscape)').matches) {
             roundTitle.animate({
@@ -67,6 +67,13 @@ $(document).ready(function() {
             maxHeight = Math.max.apply(null, divHeigths);
 
         $('.resize-it-vertical').height(maxHeight);
+
+        let divHeigthsO = $('.resize-it-vertical-organisateur').map(function() {
+                return $(this).height();
+            }).get(),
+            maxHeightO = Math.max.apply(null, divHeigthsO);
+
+        $('.resize-it-vertical-organisateur').height(maxHeightO);
     } else if (viewportW > 768) {
         roundTitle.animate({
             opacity: '1',
@@ -92,11 +99,11 @@ $(document).ready(function() {
     $('.navbar-toggle').on('click', function(e) {
         $('.navbar-collapse').show().addClass('rotate-y-anim');
         $('.navbar-toggle').fadeOut(200);
-    })
+    });
     $('.menu-li').on('click', function() {
         $('.navbar-collapse').removeClass('rotate-y-anim');
         $('.navbar-toggle').fadeIn(500);
-    })
+    });
 
     $('.close-menu').on('click', function() {
         $('.navbar-collapse').removeClass('rotate-y-anim');
@@ -150,7 +157,32 @@ $(document).ready(function() {
             });
         }
     });
+
+    /* map google */
+    $('.map-icon').on('click', function(e) {
+        e.preventDefault();
+        $('.map-popup').toggleClass('hide-it').animate({
+            bottom: '20vh'
+        }, 800);
+        //   window.scrollTo(0, $('.footer').offset().top);
+        initMap();
+    });
 });
+
+function initMap() {
+    var quaiSavoir = {
+        lat: 43.5945853,
+        lng: 1.4502551
+    };
+    var map = new google.maps.Map(document.getElementById('map-popup'), {
+        zoom: 14,
+        center: quaiSavoir
+    });
+    var marker = new google.maps.Marker({
+        position: quaiSavoir,
+        map: map
+    });
+}
 
 /* FIN Florian */
 
